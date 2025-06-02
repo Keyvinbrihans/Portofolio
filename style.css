@@ -1284,3 +1284,162 @@ img:hover{
     width: 100%;
   }
 }
+@media (max-width: 412px) {
+    .about .heading {
+        font-size:28px;
+        margin-right: 50%;
+        margin-bottom: 35px;
+      }
+    .about .about-wrapper{
+      margin-left: -45px;
+      margin-top: -10px;
+    }
+    .about .about-text {
+        font-size: 12px;
+      }
+    .skills-container{
+      margin-right: 250px;
+    }
+    .skills-box {
+        flex: 1 1 calc(22% - 10px);
+        max-width: calc(22% - 10px);
+        box-sizing: border-box;
+    }
+    .skills-container .skills-box {
+        height: 400px;
+    }
+      .education h2{
+        margin-right: 100px;
+      }
+      .education-box .education-content .content {
+        padding: 30 4px; /* Jarak kanan-kiri */
+
+      }
+        .education-box .education-content{
+          width: 56%;
+        }
+        .education-content .content .year{
+          font-size: 10px;
+          margin-right: 2px;
+          width: 150px;
+        }
+        .education-box .education-content .content h3 {
+        font-size: 12px;
+        margin-left: 10px;
+        max-width: 100px; /* Ukuran teks H3 untuk mobile */
+      }
+        .education-box .education-content .content  li {
+        font-size: 10px; /* Ukuran teks paragraf untuk mobile */
+        margin-right: 15px;
+        margin-left: 8px; 
+    }
+    .portofolio-container .portofolio-box {
+    position: relative;
+    border-radius: 2rem;
+    height: 200px;
+    width: 55%;
+    overflow: hidden;
+    display: flex;
+}
+.contact {
+    flex-direction: column;
+    padding: 10px 10px; /* Tambahkan padding agar tidak mepet */
+  }
+
+  .contact .contact-info,
+  .contact .contact-form {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .contact .contact-form input,
+  .contact .contact-form textarea {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .contact .contact-form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .contact .contact-info {
+    text-align: center;
+  }
+
+  .contact .contact-info h4,
+  .contact .contact-info p {
+    font-size: 14px;
+  }
+   .content {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .container .content .left-side,
+  .container .content .right-side {
+    width: 50%;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .content .left-side::before {
+    display: none;
+  }
+
+  .content .left-side .details {
+    margin: 10px 0;
+  }
+
+  .content .left-side .details .topic {
+    font-size: 5px;
+  }
+
+  .content .left-side .details i {
+    font-size: 24px;
+    margin-bottom: 6px;
+  }
+
+  .content .left-side .details .text-one,
+  .content .left-side .details .text-two {
+    font-size: 9px;
+  }
+  .right-side {
+    top: 0;
+    margin-top: 20px;
+    margin-right: 180px;
+
+  }
+  .right-side p {
+    font-size: 8px;
+    max-width: 40%;
+    text-align: justify;
+  }
+  .right-side .input-box {
+    width: 39%;
+    height: auto;
+    max-width: 70%;
+    margin: 10px 0;
+  }
+.content{
+   flex-direction:row;
+}
+.content .left-side .details i {
+    font-size: 15px; /* ikon lebih kecil */
+    margin-bottom: 4px;
+  }
+   .content .left-side .details .topic {
+    font-size: 12px;
+  }
+  #Contact {
+    padding: 20px 15px;
+  }
+
+  #Contact .button input[type="submit"] {
+    font-size: 14px;
+    padding: 10px 4;
+    width: 100%;
+  }
+}
