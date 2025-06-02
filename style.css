@@ -93,13 +93,12 @@ section{
     position: absolute;
     width: 400vw;
     pointer-events: none;
-  
     border-radius: 50%;
     object-fit: cover;
 }
 .home-content {
     padding: 0 20px;
-  margin-top: 20px;
+    margin-top: 20px;
     flex: 1;
     text-align: left;
 }
@@ -149,7 +148,6 @@ section{
     position: relative;
     width: 30vw;
     height: 30vw;
-
     border-radius: 50%;
     padding: 5px;
     display: flex;
@@ -508,6 +506,8 @@ img:hover{
     height: 200px;
     overflow: hidden;
     display: flex;
+    animation: slideTop 3s ease forwards;
+    animation-delay: 1s;
 }
 .portofolio-box img {
     width: 100%;
@@ -530,7 +530,6 @@ img:hover{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
     padding: 0 4rem;
     transform: translateY(100%);
     transition: .5s ease;
@@ -802,30 +801,33 @@ img:hover{
         display: block;
         font-size: 3.6rem;
     }
-    .home-content {
-        padding-left: 20px;
-        padding-right: 20px; /* atas-bawah 0, kanan-kiri 20px */
-    }
+   
     .home {
         flex-direction: column; /* tetap sejajar kiri-kanan */
     }
     .home-content{
-        font-size: 2.6rem;
+      margin-right: 650px;
     }
     .home-content h1{
-        font-size:  5rem;
+        font-size:  4rem;
+    }
+    .home-content h2{
+        font-size:  2rem;
+    }
+    .home-content h3{
+        font-size:  3.2rem;
     }
     .home-img {
-       margin-right: 100px;
+       margin-right: 600px;
        margin-top: 20px;
     }
     .home-img img{
-        width: 70vw;
+        width: 30vw;
         margin-top: 2rem;
     }
     .home-img .img-box {
-        width: 65vw;   /* atau: width: 200px; */
-        height: 65vw;  /* atau: height: 200px; */
+        width: 30vw;   /* atau: width: 200px; */
+        height: 30vw;  /* atau: height: 200px; */
       }
      
     .navbar{
@@ -1047,10 +1049,238 @@ img:hover{
    
 }
 @media (max-width: 480px) {
-    .home-img .img-box {
-      width: 100vw;   
-      height: 100vw;
+   .home-content{
+      width: 400px;
     }
-  
+    .home-content h1{
+      font-size: 3.7rem;
+    }
+    .home-img .img-box {
+      width:60vw;   
+      height: 60vw;
+    }
+    .home-img {
+       margin-right: 730px;
+       margin-top: 20px;
+    }
+    .about .heading {
+        font-size:28px;
+        margin-right: 50%;
+      }
+    .about .about-wrapper{
+      margin-left: -65px;
+      margin-top: -20px;
+    }
+    .about .about-text {
+        font-size: 12px;
+      }
+    .skills-container{
+      margin-left: -215px;
+    }
+    .skills-box {
+        flex: 1 1 calc(22% - 10px);
+        max-width: calc(22% - 10px);
+        box-sizing: border-box;
+      }
+      .skills-container .skills-box {
+        height: 400px;
+      }
+      /* Box ketiga penuh lebar */
+      .skills-box:nth-child(3) {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+      .skills-box h3{
+        font-size: 20px;
+      }
+       .skills-box i{
+        font-size: 30px;
+      }
+       .skills-box p{
+        font-size: 10px;
+      }
+      .education h2{
+        margin-left: -300px;
+      }
+      .education-box .education-content .content {
+        padding: 30 4px; /* Jarak kanan-kiri */
 
+      }
+        .education-box .education-content{
+          width: 62%;
+        }
+        .education-content .content .year{
+          font-size: 10px;
+          margin-right: 2px;
+          width: 150px;
+        }
+        .education-box .education-content .content h3 {
+        font-size: 12px;
+        margin-left: 10px;
+        max-width: 100px; /* Ukuran teks H3 untuk mobile */
+      }
+        .education-box .education-content .content  li {
+        font-size: 12px; /* Ukuran teks paragraf untuk mobile */
+        margin-right: 15px;
+        margin-left: 8px; 
+    }
+    .portofolio-container .portofolio-box {
+    position: relative;
+    border-radius: 2rem;
+    height: 200px;
+    width: 60%;
+    overflow: hidden;
+    display: flex;
+}
+.portofolio-box img {
+    width: 100%;
+    transition: .5s ease;
+    
+}
+.portofolio-box:hover img{
+    transform:scale(1.1) ;
+    
+}
+.portofolio-box .portofolio-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, .7), rgb(3, 52, 110));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+.portofolio-box:hover .portofolio-layer {
+    transform: translateY(0);
+    
+}
+.portofolio h4{
+    font-size: 2rem;
+    margin-top: 13px;
+}
+.portofolio-layer p{
+    font-size: 1.2rem;
+    text-align: justify;
+    margin: 0 0 1rem;
+}
+.portofolio-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: #021526;
+    border-radius: 50%;
+}
+.portofolio-layer a i {
+    font-size: 2rem;
+    color:white;
+}
+.contact {
+    flex-direction: column;
+    padding: 10px 10px; /* Tambahkan padding agar tidak mepet */
   }
+
+  .contact .contact-info,
+  .contact .contact-form {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .contact .contact-form input,
+  .contact .contact-form textarea {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .contact .contact-form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .contact .contact-info {
+    text-align: center;
+  }
+
+  .contact .contact-info h4,
+  .contact .contact-info p {
+    font-size: 14px;
+  }
+   .content {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .container .content .left-side,
+  .container .content .right-side {
+    width: 50%;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .content .left-side::before {
+    display: none;
+  }
+
+  .content .left-side .details {
+    margin: 10px 0;
+  }
+
+  .content .left-side .details .topic {
+    font-size: 5px;
+  }
+
+  .content .left-side .details i {
+    font-size: 24px;
+    margin-bottom: 6px;
+  }
+
+  .content .left-side .details .text-one,
+  .content .left-side .details .text-two {
+    font-size: 9px;
+  }
+  .right-side {
+    top: 0;
+    margin-top: 20px;
+    padding: 0 10px;
+  }
+  .right-side p {
+    font-size: 8px;
+    max-width: 38%;
+    text-align: justify;
+  }
+  .right-side .input-box {
+    width: 39%;
+    height: auto;
+    max-width: 70%;
+    margin: 10px 0;
+  }
+.content{
+   flex-direction:row;
+}
+.content .left-side .details i {
+    font-size: 15px; /* ikon lebih kecil */
+    margin-bottom: 4px;
+  }
+   .content .left-side .details .topic {
+    font-size: 12px;
+  }
+  #Contact {
+    padding: 20px 15px;
+  }
+
+  #Contact .button input[type="submit"] {
+    font-size: 14px;
+    padding: 10px 4;
+    width: 100%;
+  }
+}
